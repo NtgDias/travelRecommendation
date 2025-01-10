@@ -102,8 +102,21 @@ body{
 }
 
 
-/* Social Media Links */
+/* Line & Social Media Links */
 
 .social-media{
     margin: 10px;
+    position: absolute;
+    top: 70%;
+    transform: translate(0, -50%);
+}
+
+.line {
+    border-left: 1px solid white;
+    height: 250px;
+
+    margin: 20px;
+    position: absolute;
+    top: 30%;
+    transform: translate(0, -50%);
 }
