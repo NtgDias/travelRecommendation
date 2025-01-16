@@ -107,16 +107,64 @@ body{
 .social-media{
     margin: 10px;
     position: absolute;
-    top: 70%;
+    top: 65%;
     transform: translate(0, -50%);
 }
 
-.line {
+.social-line {
     border-left: 1px solid white;
-    height: 250px;
+    height: 200px;
 
-    margin: 20px;
+    margin: 30px;
     position: absolute;
-    top: 30%;
+    top: 25%;
     transform: translate(0, -50%);
+}
+
+/* Home Section */
+
+.home {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 100px;
+}
+
+.home_content{
+    max-width: 600px;
+
+}
+
+.home_content h1{
+    font-size: 4rem;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+}
+
+.home_content p{
+    font-size: 1.2rem;
+    line-heigth: 1.8;
+    color: #333333;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+    margin-bottom: 30px;
+}
+
+.btn-book{
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-book:hover{
+    background-color: #0056b3;
 }
