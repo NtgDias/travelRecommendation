@@ -1,12 +1,14 @@
-/* Basic CSS for the navigation bar */
+
 
 body{
     margin: 0;
     padding: 0;
+    height: 100%;
     box-sizing: border-box;
     background-image: url("./background.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
+
 }
 
 .navbar{
@@ -28,7 +30,7 @@ body{
     margin-right: 10px;
 }
 .site-name{
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
 }
 
@@ -38,14 +40,14 @@ body{
     color: white;
     padding: 8px 15px;
     background-color: transparent;
-    /*border: 1px solid white;*/
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border: transparent;
+
 }
 
 .navbar-center .nav-button {
     padding: 6px 12px;
-    font-size: 14px;
+    font-size: 18px;
+
 }
 
 .navbar-center .nav-button:hover {
@@ -74,23 +76,22 @@ body{
     padding: 6px;
 }
 
-/* Input dentro do container */
+
 .search-container .search-input {
     border: none;
     outline: none;
-    color: #3b9c7a;
+    color: #0077cc;
     padding: 8px;
-    flex: 1; /* Faz o input ocupar o espaço disponível */
-    border-radius: 25px 0 0 25px; /* Borda arredondada no lado esquerdo */
+    flex: 1;
+    border-radius: 25px 0 0 25px;
 }
 
-/* Botões dentro do container */
+
 .search-container .search-button {
     padding: 8px 15px;
     border: none;
-    background-color: #3b9c7a;
+    background-color: #0077cc;
     color: white;
-   /* border-radius: 0 25px 25px 0;  Borda arredondada no lado direito */
     cursor: pointer;
     transition: background-color 0.3s;
     margin-right: 10px;
@@ -99,6 +100,7 @@ body{
 
 .search-container .search-button:hover {
     font-weight: bolder;
+    background-color: #005fa3;
 }
 
 
@@ -109,36 +111,48 @@ body{
     position: absolute;
     top: 65%;
     transform: translate(0, -50%);
+
 }
 
 .social-line {
     border-left: 1px solid white;
-    height: 200px;
+    height: 280px;
 
     margin: 30px;
     position: absolute;
-    top: 25%;
+    top: 23%;
     transform: translate(0, -50%);
 }
 
-/* Home Section */
+/*   Home
+    Section */
+.home_section{
+    display: flex;
+    align-items: center;
 
+
+}
 .home {
-    position: relative;
-    height: 100vh;
+    position: absolute;
+    /*height: 100vh;*/
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 100px;
+    top: 30%;
+    left: 10%;
+    box-sizing: border-box;
+
 }
 
 .home_content{
-    max-width: 600px;
+    max-width: 700px;
+
+
 
 }
 
 .home_content h1{
-    font-size: 4rem;
+    font-size: 6rem;
     line-height: 1.2;
     font-weight: bold;
     color: #ffffff;
@@ -149,14 +163,15 @@ body{
 
 .home_content p{
     font-size: 1.2rem;
-    line-heigth: 1.8;
-    color: #333333;
-    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+    line-height: 1.8;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     margin-bottom: 30px;
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .btn-book{
-    background-color: #007bff;
+    background-color: #0077cc;
     color: white;
     padding: 15px 30px;
     border: none;
@@ -166,5 +181,327 @@ body{
 }
 
 .btn-book:hover{
-    background-color: #0056b3;
+    background-color: #005fa3;
 }
+
+/* Design das recomendacoes */
+
+#result {
+    overflow-y: auto;
+    gap: 20px;
+    max-height: 1000px;
+    scroll-snap-type: x mandatory;
+
+    float: right;
+    padding-right: 60px;
+
+
+}
+
+.time-bar{
+    margin: 10px 10px;
+    width: 600px;
+    background-color: #0077cc;
+    text-align: center;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+
+}
+
+.place {
+    /*border: 1px solid #ccc;*/
+    flex: 0 0 calc(50% - 20px);
+    min-width: calc(50% - 20px);
+    scroll-snap-align: start;
+
+    border-radius: 8px;
+    width: 600px;
+    text-align: left;
+    background-color: white;
+    gap: 25px;
+    margin: 10px;
+
+}
+
+.place img {
+    width: 100%;
+    height: 300px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.place h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    padding-left: 15px;
+}
+
+
+.place p {
+    font-size: 0.9em;
+    color: #555;
+    padding-left: 15px;
+
+}
+
+.place button {
+    margin: 10px 15px;
+    width: 50px;
+    background-color: #0077cc;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.place button:hover {
+    background-color: #005fa3;
+}
+/* About Us */
+/* Section */
+
+
+.about {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.about-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    /*margin-bottom: 20px;*/
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    margin: 0 20px 20px 20px;
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+.about-content p {
+    margin: 0 20px 20px 120px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    background: rgba(0,0,0,0.2);
+    display: inline-block;
+    padding: 0.5rem 0.9rem;
+    border-radius: 10px;
+    color: #ffffff;
+
+
+}
+
+.about-content span {
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Team Section */
+.team-section {
+
+    padding: 100px 10px;
+    text-align: left;
+}
+
+.team-section h2 {
+    font-size: 4rem;
+    color: #ffffff;
+    margin-bottom: 40px;
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+
+
+}
+
+
+.team-card .avatar {
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-image: url("./avatar.png");
+    background-size: cover;
+    background-position: center;
+    border: 3px solid white;
+    margin: 0 auto 15px;
+    /*margin-right: 1rem*/
+}
+
+.team-card .info{
+    flex: 1;
+    text-align: left;
+    padding: 1rem;
+}
+
+.team-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.team-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.team-card button {
+    background: #0077cc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.team-card button:hover {
+    background: #005fa3;
+}
+
+/* Contact Us */
+/* Section */
+
+.contact-section {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    padding: 0 10%;
+    box-sizing: border-box;
+
+}
+
+.contact-info{
+    display: block;
+    align-items: center;
+    height: 300px;
+    padding: 10px;
+}
+
+.contact-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    margin: 0 auto;
+    gap: 100px;
+
+}
+
+.contact-text{
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact-text h1 {
+
+    font-size: 6rem;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+}
+
+.contact-text p {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+
+.contact-form{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+.contact-form label {
+   /* margin: 10px;*/
+    font-size: 1.2rem;
+    color: #b8b8b8;
+
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-style: solid;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #b8b8b8;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+.contact-form button {
+    background-color: #0077cc;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.contact-form button:hover {
+    background-color: #005fa3;
+}
+
+#airplane{
+    position: fixed;
+    top: 75%;
+    left: 200px;
+    width: 200px;
+    height: 100px;
+    background-image: url("./airplane.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1000;
+    display: none;
+}
+
+@keyframes fly {
+    0% {
+        left: 180px;
+    }
+    50% {
+        transform: translateY(-100px);
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+

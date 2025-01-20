@@ -20,24 +20,30 @@
         </div>
 
         <!--Navigation-->
-        <div class="navbar-center">
-            <a href="./index.html" id="home" class="nav-button">Home </a>
-            <a href="travel_about.html" id="about" class="nav-button">About Us </a>
-            <a href="travel_contact.html" id="contact" class="nav-button">Contact Us </a>
+        <div class="navbar-center" id="nav-bar-center">
+            <!--<a href="./index.html" id="home" class="nav-button">Home </a>
+            <a href="./index.html" id="about" class="nav-button">About Us </a>
+            <a href="./index.html" id="contact" class="nav-button">Contact Us </a>-->
+            <a href=#nav-bar-center><button id="home" class="nav-button">Home</button></a>
+            <button id="about" class="nav-button">About Us</button>
+            <a href=#nav-bar-center><button id="contact" class="nav-button">Contact Us</button></a>
         </div>
             
         <!--Search-->
-        <div class="navbar-right">
-            <div class="search-container">
-                <input type="text" id="serchInput" placeholder="Enter a destination or keyword" class="search-input"> 
+        <div class="navbar-right" >
+            <div class="search-container" id="bar_right" style="display:inline-flex">
+                <input type="text" id="inputSearch" placeholder="Enter a destination or keyword" class="search-input">
                 <img src="https://clipart-library.com/images/8Tx8py9Xc.png" alt="Search" class="search-icon">
                 <button id='btnSearch' class="search-button">Search</button>
                 <button id='btnClear' class="search-button">Clear</button>
             </div>
+
         </div>
 
     </nav>
+    <div class= "result" id="result" style="display:block">
 
+    </div>
 </section>
 
 <section id="SocialMedia">
@@ -57,14 +63,104 @@
 
 </section>
 
-<div class="home">
+<section id="home_section">
+<div class="home" id="home_button" style="display:block">
 
-        <div class="home_content" style="display:block">
+        <div id="airplane"></div>
+
+        <div class="home_content" >
             <h1>YOUR DREAM<br>EXPERIENCE<br>AWAITS!</h1>
-            <p>Have you find yourself daydreaming about vacations? Where to go, what to visit? Or simply relax a bit? Don't look further, we got what you need to find that amazing place you are looking for.</p>
-            <button class="btn-book">Book Now</button>
+            <p>Have you found yourself daydreaming about vacations? Where to go, what to visit? Or simply relax a bit? Don't look further, we got what you need to find that amazing place you are looking for.</p>
+            <div id="airplane"></div>
+            <button class="btn-book" id="btnBook">Book Now</button>
         </div>
+
+
+
+
 </div>
+</section>
+
+<div class="about" id="about_button" style="display:none">
+
+    <div class="about-content">
+
+        <h1>ABOUT US</h1>
+        <!--<div class="about-text">-->
+            <p>
+                Welcome to TravelTime! We are a team of passionate individuals that specialized in always provide what our customers needs.<br>
+                We always <span>provide the best experience</span> for people traveling around the world. We focus on integrity, innovation, and <span>customer satisfaction.</span><br>
+                Feel free to explore our website and learn more about what we offer!
+            </p>
+        <!--</div>-->
+    </div>
+
+    <div class="team-section">
+
+        <div class="team-members">
+            <h2>OUR<br> TEAM</h2>
+            <!-- Membro 1 -->
+            <div class="team-card">
+                <div class="avatar"></div>
+                <div class="info">
+                    <h3>Nelson Dias</h3>
+                    <p>Nelson is responsible for...</p>
+                    <button>CEO</button>
+                </div>
+            </div>
+            <!-- Membro 2 -->
+            <div class="team-card">
+                <div class="avatar"></div>
+                <div class="info">
+                    <h3>Jane Doe</h3>
+                    <p>Jane is responsible for...</p>
+                    <button>Team Lead</button>
+                </div>
+            </div>
+            <!-- Membro 3 -->
+            <div class="team-card">
+                <div class="avatar"></div>
+                <div class="info">
+                    <h3>John Doe</h3>
+                    <p>John is responsible for...</p>
+                    <button>Delivery Head</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="contact-info">
+
+</div>
+<section class="contact-section" id="contact_button" style="display:none">
+    <!--<div class="contact_content" >-->
+    <div class="contact-container">
+
+
+
+        <div class="contact-text">
+            <br><br><br><br><h1>Contact Us</h1>
+            <p>Get in touch!</p>
+        </div>
+
+            <form class="contact-form">
+
+                <label for="name">Name</label><br/>
+                <input type="text" placeholder="Enter your name" id="name" required><br/>
+
+                <label for="email">Email</label><br/>
+                <input type="email" placeholder="Enter your email" id="email" required><br/>
+
+                <label for="message">Message</label><br/>
+                <textarea cols="70" rows="8" placeholder="Enter your message" id="message" required></textarea><br/>
+
+                <button onclick="comment()" type="submit">Submit</button>
+            </form>
+
+    </div>
+
+</section>
 
 <script src="travel_recommendation.js"></script>
 </body>
